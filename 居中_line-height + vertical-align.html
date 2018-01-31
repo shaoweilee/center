@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public.css">
+    <title>居中_absolute+margin-auto</title>
+    <style>
+        .wrapper{
+            position: relative;
+        }
+        .content{
+            position: absolute;
+            top: 0; left: 0; right: 0;bottom: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>居中_absolute+margin-auto</h1>
+    <div class="wrapper">
+        <div class="content">取消left/right/width属性看看结果</div>
+    </div>
+    <p class="note">首先要明白为啥margin: 0 auto可以让块级元素水平居中，而不能垂直居中</p>
+    <p class="note"><strong>当一个绝对定位元素，其对立定位方向属性同时有具体定位数值的时候，流体特性就发生了，理解这句话很重要</strong><p>(可以粗暴无视absolute的包裹性)</p>
+    <p class="note"><strong>开F12，取消left与right观察结果（呈现absolute的包裹性）</p>
+    <p class="note"><strong>取消left与right与width观察结果（仍然是包裹性）</p>
+    <p class="note"><strong>取消width，勾选left与right观察结果（呈现流体特性）</p>
+    <p class="foundation">
+        <span>相关阅读</span><br>
+        <a href="https://www.zhihu.com/question/21644198" class="foundation-link" target="_blank">margin: 0 auto</a><br>
+        <a href="http://www.zhangxinxu.com/wordpress/?p=3794" class="foundation-link" target="_blank" style="background: #f00">必看</a><br>
+    </p>
+</body>
+</html>

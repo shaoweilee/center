@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public.css">
+    <title>居中_absolute+负margin</title>
+    <style>
+        .wrapper{
+            position: relative;
+        }
+        .content{
+            position: absolute;
+            top: 50%;left: 50%;
+            margin: -50px 0 0 -50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>居中_absolute+负margin</h1>
+    <div class="wrapper">
+        <div class="content"></div>
+    </div>
+    <p class="note">这个需要注意的是几个百分比：top、left以及margin的。</p>
+    <p class="note">left与top的百分比取值是以offsetParent元素的padding-box的宽度和高度为基准来计算的。</p>
+    <p class="note">margin的百分比取值是以offsetParent元素的padding-box的宽度为基准来计算的。</p>
+    <p class="note">以及……居中后给content加border和padding，有奇…效……(所以要设置成border-box)</p>
+    <p class="foundation">
+        <span>相关阅读</span><br>
+        <a href="http://blog.csdn.net/qq_35809245/article/details/54233662" class="foundation-link" target="_blank">padding/margin百分比</a><br>
+    </p>
+</body>
+</html>

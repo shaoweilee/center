@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public.css">
+    <title>居中absolute + transform</title>
+    <style>
+        .wrapper{
+            position: relative;
+        }
+        .content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .content:hover{
+            animation: test 1s;
+        }
+        @keyframes test{
+            from{transform: none}
+            to{transform: translate(200px)}
+        }
+    </style>
+</head>
+<body>
+    <h1>居中absolute + transform</h1>
+    <div class="wrapper">
+        <div class="content"></div>
+    </div>
+    <p class="note">主要就是……translate的百分比取值是按照元素自身的尺寸来的，因此可以实现<strong>不定宽元素的居中。</strong></p>
+    <p class="note">但是也会对自身的transform<strong>位移</strong>动画产生影响，产生十分鬼畜的效果。鼠标放到content上欣赏：）</p>
+    <p class="foundation">
+        <span>相关阅读</span><br>
+        <a href="#" class="foundation-link" target="_blank">暂无</a><br>
+    </p>
+</body>
+</html>

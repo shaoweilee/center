@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public.css">
+    <title>居中writing-mode</title>
+    <style>
+        .wrapper{
+            writing-mode: vertical-lr;
+            text-align: center;
+        }
+        .wrapper-inner{
+            writing-mode: horizontal-tb;
+            display: inline-block;
+            text-align: left;
+            width: 100%;
+        }
+        .content{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>居中writing-mode</h1>
+    <div class="wrapper">
+        <div class="wrapper-inner">
+            <div class="content"></div>
+        </div>
+    </div>
+    <p class="note">emmmm，css博大精深……还是没研究过……
+    </p>
+    <p class="foundation">
+        <span>相关阅读</span><br>
+        <a href="#" class="foundation-link" target="_blank">暂无</a><br>
+    </p>
+</body>
+</html>
